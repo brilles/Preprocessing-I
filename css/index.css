@@ -136,7 +136,7 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  font-family: Helvetica, Arial, Sans-Serif;
+  font-family: "Rubik", sans-serif;
 }
 @media (max-width: 500px) {
   .container {
