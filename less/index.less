@@ -57,4 +57,88 @@ html, body {
 	height: 100%;
 }
 
+//Variables
+@main-bg: #e8ecef;
+@main-pad: 10px 0;
+@border-temp: 1px solid red; 
+@main-section-padding: 1% 5%;
+@main-child-pad: 1% 0 3% 0;
+
+//Mixins
+
+//General Styles
+
+.container {
+	max-width: 880px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	font-family: Helvetica, Arial, Sans-Serif;
+
+	header {
+		display: flex;
+		justify-content: flex-end;
+		padding: 3% 0;
+
+		nav a {
+			text-decoration: none;
+			color: black;
+			padding: 15px;
+			font-weight: bold;
+			font-size: 1.05rem;
+		}
+		nav a:last-of-type {
+			padding-right: 0;
+		}
+	}
+
+	img {
+		width: 300px;
+		height: 250px;
+		border-radius: 5px;
+	}
+
+	.main-content {
+	border-radius: 5px;
+
+	.top {
+		background: @main-bg;
+		border-radius: 10px;
+		padding: @main-section-padding;
+		.half-one {
+			padding: 2% 0;
+			border-bottom: 1px solid lightgrey;
+			h1 {
+				font-size: 3.5rem;
+				padding: @main-child-pad;
+			}
+			h3 {
+				font-size: 1.3rem;
+			}
+		}
+		.half-two {
+			padding: 2% 0 0 0;
+			font-size: 1.1rem;
+			button {
+				background: rgb(121, 110, 110);
+				border-radius: 5px;
+				color: white;
+				font-size: 1.5rem;
+				border: none;
+				padding: 1% 1%;
+				margin: 2% 0;
+			}
+		}
+	}
+	.middle {
+		padding: @main-pad;
+	}
+	.bottom {
+		padding: @main-pad;
+	}
+
+	}
+}
+
+
 

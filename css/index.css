@@ -134,4 +134,68 @@ html,
 body {
   height: 100%;
 }
-
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+.container header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3% 0;
+}
+.container header nav a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+.container header nav a:last-of-type {
+  padding-right: 0;
+}
+.container img {
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
+}
+.container .main-content {
+  border-radius: 5px;
+}
+.container .main-content .top {
+  background: #e8ecef;
+  border-radius: 10px;
+  padding: 1% 5%;
+}
+.container .main-content .top .half-one {
+  padding: 2% 0;
+  border-bottom: 1px solid lightgrey;
+}
+.container .main-content .top .half-one h1 {
+  font-size: 3.5rem;
+  padding: 1% 0 3% 0;
+}
+.container .main-content .top .half-one h3 {
+  font-size: 1.3rem;
+}
+.container .main-content .top .half-two {
+  padding: 2% 0 0 0;
+  font-size: 1.1rem;
+}
+.container .main-content .top .half-two button {
+  background: #796e6e;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1% 1%;
+  margin: 2% 0;
+}
+.container .main-content .middle {
+  padding: 10px 0;
+}
+.container .main-content .bottom {
+  padding: 10px 0;
+}
