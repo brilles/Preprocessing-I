@@ -4,141 +4,286 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+// ol, ul {
+// 	list-style: none;
+// }
+blockquote,
+q {
+  quotes: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
 
 //Variables
 @main-bg: #e8ecef;
 @main-pad: 10px 0;
-@border-temp: 1px solid red; 
+@border-temp: 1px solid red;
 @main-section-padding: 1% 5%;
 @main-child-pad: 1% 0 3% 0;
+@title: 1.3rem;
+@main-font: 0.9rem;
 
 //Mixins
+.center() {
+  display: flex;
+  justify-content: center;
+}
+.bordered() {
+  border: 1px solid black;
+  margin: 1% 0 3% 0;
+}
 
 //General Styles
 
 .container {
-	max-width: 880px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	font-family: Helvetica, Arial, Sans-Serif;
+  max-width: 880px;
+  margin: 0 auto;
+  .center;
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, Arial, Sans-Serif;
+  @media (max-width: 500px) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 3% 0;
+    @media (max-width: 500px) {
+      justify-content: flex-start;
+    }
 
-	header {
-		display: flex;
-		justify-content: flex-end;
-		padding: 3% 0;
+    nav a {
+      text-decoration: none;
+      color: black;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 1.05rem;
+    }
+    nav a:last-of-type {
+      padding-right: 0;
+    }
+  }
 
-		nav a {
-			text-decoration: none;
-			color: black;
-			padding: 15px;
-			font-weight: bold;
-			font-size: 1.05rem;
-		}
-		nav a:last-of-type {
-			padding-right: 0;
-		}
-	}
+  img {
+    .bordered;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+  }
 
-	img {
-		width: 300px;
-		height: 250px;
-		border-radius: 5px;
-	}
+  .main-content {
+    border-radius: 5px;
 
-	.main-content {
-	border-radius: 5px;
+    .top {
+      background: @main-bg;
+      border-radius: 10px;
+      padding: @main-section-padding;
+      .half-one {
+        padding: 2% 0;
+        border-bottom: 1px solid lightgrey;
+        h1 {
+          font-size: 3.5rem;
+          padding: @main-child-pad;
+        }
+        h3 {
+          font-size: @title;
+        }
+      }
+      .half-two {
+        padding: 2% 0 0 0;
+        font-size: 1.1rem;
+        button {
+          background: rgb(121, 110, 110);
+          border-radius: 5px;
+          color: white;
+          font-size: 1.5rem;
+          border: none;
+          padding: 1% 1%;
+          margin: 2% 0;
+        }
+      }
+    }
+    .middle {
+      background: @main-bg;
+      border-radius: 5px;
+      margin-top: 3%;
+      padding: 3%;
+      line-height: 1.25;
+      h2,
+      h3 {
+        font-weight: bold;
+        margin-bottom: 3%;
+      }
+      display: flex;
+      justify-content: space-between;
+      .listen-up {
+        width: 70%;
+        margin-right: 10%;
+      }
+    }
+    .bottom {
+      margin-top: 3%;
+      background: @main-bg;
+      border-radius: 5px;
+      margin: 3% 0;
+      padding: 3%;
 
-	.top {
-		background: @main-bg;
-		border-radius: 10px;
-		padding: @main-section-padding;
-		.half-one {
-			padding: 2% 0;
-			border-bottom: 1px solid lightgrey;
-			h1 {
-				font-size: 3.5rem;
-				padding: @main-child-pad;
-			}
-			h3 {
-				font-size: 1.3rem;
-			}
-		}
-		.half-two {
-			padding: 2% 0 0 0;
-			font-size: 1.1rem;
-			button {
-				background: rgb(121, 110, 110);
-				border-radius: 5px;
-				color: white;
-				font-size: 1.5rem;
-				border: none;
-				padding: 1% 1%;
-				margin: 2% 0;
-			}
-		}
-	}
-	.middle {
-		padding: @main-pad;
-	}
-	.bottom {
-		padding: @main-pad;
-	}
+      h3 {
+        font-size: @title;
+        font-weight: bold;
+        margin: 1% 0;
+      }
+      h4 {
+        font-size: 1.2rem;
+        margin: 1% 0;
+      }
+      .table {
+        display: flex;
+        justify-content: space-between;
+        padding: 1%;
+        border-radius: 5px;
+      }
+      p,
+      ul {
+        padding-top: 5%;
+      }
+    }
+  }
 
-	}
+  footer {
+    text-align: center;
+    background-color: rgb(179, 178, 178);
+    padding: 2% 0;
+    // border-radius: 5px;
+    margin-bottom: 5%;
+  }
+  p {
+    font-size: @main-font;
+  }
 }
-
-
-
