@@ -1,1 +1,257 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+}
+@media (max-width: 500px) {
+  .container {
+    margin: 0 5%;
+  }
+}
+.container header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 3% 0;
+}
+@media (max-width: 500px) {
+  .container header {
+    justify-content: flex-start;
+  }
+}
+.container header nav a {
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+.container header nav a:last-of-type {
+  padding-right: 0;
+}
+.container img {
+  border: 1px solid black;
+  margin: 1% 0 3% 0;
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
+}
+.container .main-content {
+  border-radius: 5px;
+}
+.container .main-content .top {
+  background: #e8ecef;
+  border-radius: 10px;
+  padding: 1% 5%;
+}
+.container .main-content .top .half-one {
+  padding: 2% 0;
+  border-bottom: 1px solid lightgrey;
+}
+.container .main-content .top .half-one h1 {
+  font-size: 3.5rem;
+  padding: 1% 0 3% 0;
+}
+.container .main-content .top .half-one h3 {
+  font-size: 1.3rem;
+}
+.container .main-content .top .half-two {
+  padding: 2% 0 0 0;
+  font-size: 1.1rem;
+}
+.container .main-content .top .half-two button {
+  background: #796e6e;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1% 1%;
+  margin: 2% 0;
+}
+.container .main-content .middle {
+  background: #e8ecef;
+  border-radius: 5px;
+  margin-top: 3%;
+  padding: 3%;
+  line-height: 1.25;
+  display: flex;
+  justify-content: space-between;
+}
+.container .main-content .middle h2,
+.container .main-content .middle h3 {
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+.container .main-content .middle .listen-up {
+  width: 70%;
+  margin-right: 10%;
+}
+.container .main-content .bottom {
+  margin-top: 3%;
+  background: #e8ecef;
+  border-radius: 5px;
+  margin: 3% 0;
+  padding: 3%;
+}
+.container .main-content .bottom h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1% 0;
+}
+.container .main-content .bottom h4 {
+  font-size: 1.2rem;
+  margin: 1% 0;
+}
+.container .main-content .bottom .table {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  border-radius: 5px;
+}
+.container .main-content .bottom p,
+.container .main-content .bottom ul {
+  padding-top: 5%;
+}
+.container footer {
+  text-align: center;
+  background-color: #b3b2b2;
+  padding: 2% 0;
+  margin-bottom: 5%;
+}
+.container p {
+  font-size: 0.9rem;
+}
