@@ -138,6 +138,11 @@ body {
   flex-direction: column;
   font-family: "Rubik", sans-serif;
 }
+@media (max-width: 500px) {
+  .container {
+    margin: 0 5%;
+  }
+}
 .container header {
   display: flex;
   justify-content: flex-end;
